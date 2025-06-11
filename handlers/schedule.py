@@ -22,7 +22,8 @@ async def show_schedule(message: types.Message):
     else:
         await message.answer(
            f'🗓 Занятия у тебя проходят в *{user["day_of_week"]}*\n' #*...* — способ выделить жирный текст
-            f'🕒 Время: *{user["lesson_time"].strftime('%H:%M')}*\n'
+            f'🕒 Время: *{user["lesson_time"].strftime("%H:%M")}*\n'
+
             f'👤 Имя: {user["first_name"]}',
             parse_mode='Markdown'
 
