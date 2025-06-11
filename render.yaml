@@ -1,0 +1,27 @@
+services:
+  - type: web
+    name: english-bot
+    runtime: python
+    plan: free
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "python bot.py"
+    autoDeploy: true
+    envVars:
+      - key: BOT_TOKEN
+        sync: false
+      - key: DB_HOST
+        sync: false
+      - key: DB_PORT
+        sync: false
+      - key: DB_NAME
+        sync: false
+      - key: DB_USER
+        sync: false
+      - key: DB_PASSWORD
+        sync: false
+      - key: ADMIN_IDS
+        sync: false
+      - key: TEACHER_USERNAME
+        sync: false
+      - key: SUPPORT_USERNAME
+        sync: false
