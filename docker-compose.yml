@@ -1,0 +1,9 @@
+version: '3.8'
+
+services:
+  english_bot:
+    build: .
+    container_name: english-bot
+    env_file:
+      - .env
+    restart: always
